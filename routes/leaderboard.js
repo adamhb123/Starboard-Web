@@ -23,7 +23,7 @@ router.get("/", function (req, res) {
 				} 
 			}
 			console.log(starredUserMessageMap);
-			res.render("leaderboard",{title: "SUSSYBOARD", starredUserMessageMap:starredUserMessageMap});
+			res.render("leaderboard",{title: "Starboard Web", starredUserMessageMap:starredUserMessageMap});
 		});
 	});
 });

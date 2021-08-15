@@ -3,8 +3,6 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
-const busboy = require("connect-busboy");
-const busboyBodyParser = require("busboy-body-parser");
 
 const leaderboardRouter = require("./routes/leaderboard");
 
@@ -13,9 +11,6 @@ const app = express();
 // view engine setup (ejs)
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-
-//  various setup commands
-app.use(busboy());
 
 app.use(logger("dev"));
 app.use(express.json());
