@@ -11,4 +11,4 @@ Install dependencies
     npm install
 ### Execution
 
-    node bin/www
+    npm start
