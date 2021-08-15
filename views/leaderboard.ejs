@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
-	<title><%= title %></title>
-	<link rel='stylesheet' href='/stylesheets/leaderboard.css' />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="/jslibs/linkify.min.js"></script>
-	<script src="/jslibs/linkify-jquery.min.js"></script>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/leaderboard.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="/jslibs/linkify.min.js"></script>
+    <script src="/jslibs/linkify-jquery.min.js"></script>
 </head>
 
 <body>
-	<h1 id="header">🌟 Starboard Top Chungis - All Time 🌟</h1>
-	<div class="leaderboard-container">
-		<!-- iterating through users -->
-		<% for(let userKey in starredUserMessageMap) {%>
-			<!-- iterating through messages -->
-			<% for(let i=0; i<starredUserMessageMap[userKey].length; i++) {%>	
-				<div class="message-container">
-					<div class="message-user-area">
-						<img class="message-user-image" src="<%= starredUserMessageMap[userKey][i].user.image %>"/>
-						<%= starredUserMessageMap[userKey][i].user.name %>
-					</div>
-					<div class="message-text-area">
-						<%= starredUserMessageMap[userKey][i].message.text %>
-					</div>
-					<a href="<%= starredUserMessageMap[userKey][i].message.permalink %>"><img class="message-external-link" src="/images/externallink.svg"/></a>			
-				</div>
-			<% } %>
-		<% } %>
-	</div>
-	<script>
-		$('.message-text-area').linkify();
-	</script>
+    <h1 id="header">🌟 Starboard Top Chungis - All Time 🌟</h1>
+    <div class="leaderboard-container">
+        <!-- iterating through users -->
+        <% for(let userKey in starredUserMessageMap) {%>
+        <!-- iterating through messages -->
+        <% for(let i=0; i<starredUserMessageMap[userKey].length; i++) {%>
+        <div class="message-container">
+            <div class="message-user-area">
+                <img class="message-user-image" src="<%= starredUserMessageMap[userKey][i].user.image %>" />
+                <%= starredUserMessageMap[userKey][i].user.name %>
+            </div>
+            <div class="message-text-area">
+                <%= starredUserMessageMap[userKey][i].message.text %>
+            </div>
+            <a href="<%= starredUserMessageMap[userKey][i].message.permalink %>"><img class="message-external-link" src="/images/externallink.svg" /></a>
+        </div>
+        <% } %>
+        <% } %>
+    </div>
+    <script>
+	// Untested
+        $('.message-text-area').linkify();
+    </script>
 </body>
+
 </html>
