@@ -20,17 +20,18 @@
             <div class="message-user-area">
                 <img class="message-user-image" src="<%= starredUserMessageMap[userKey][i].user.image %>" />
                 <%= starredUserMessageMap[userKey][i].user.name %>
+                <span class="message-star-count">🌟 <%= starredUserMessageMap[userKey][i].message.reactions.find(reaction => reaction.name == "star").count %></span>
             </div>
             <div class="message-text-area">
                 <%= starredUserMessageMap[userKey][i].message.text %>
-            </div>
+                            </div>
             <a href="<%= starredUserMessageMap[userKey][i].message.permalink %>"><img class="message-external-link" src="/images/externallink.svg" /></a>
         </div>
         <% } %>
         <% } %>
     </div>
     <script>
-        $('.message-text-area').linkify();
+        //$('.message-text-area').linkify();
     </script>
 </body>
 

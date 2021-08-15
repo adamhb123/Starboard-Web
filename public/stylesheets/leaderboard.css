@@ -1,4 +1,4 @@
-body{
+body {
 	background-color: whitesmoke;
 }
 
@@ -45,6 +45,12 @@ body{
 	width:100%;
 	word-wrap: break-word;
 	margin:15px;
+}
+
+.message-star-count {
+    position: absolute;
+    right: 35px;
+    top: 7px;    
 }
 
 .message-external-link {
