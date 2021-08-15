@@ -10,7 +10,7 @@ class User {
     }
     equals(other) {
         if (!(other instanceof User)) return false;
-        return this.name == other.name && this.image == other.image
+        return this.id == other.id && this.name == other.name && this.image == other.image
     }
 }
 
@@ -107,8 +107,7 @@ async function getAllStarredMessages(ordered = true) {
             messages.push(message);
         }
         if (ordered) {
-            console.log("FILTERED: " + JSON.stringify(messages.find(message => message.reactions.find(reaction => reaction.name === secrets.reactionName || "star"))));
-            //messages.sort((a, b) => (a.reactions.find(reaction => reaction.name === secrets.reactionName || "star")).count - (b.reactions.find(reaction => reaction.name === secrets.reactionName || "star")).count);		
+            messages.sort((a,b) => b.reactions.find(reaction => reaction.name=="star").count - a.reactions.find(reaction => reaction.name=="star").count)
         }
         return messages;
     }
