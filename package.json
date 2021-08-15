@@ -1,0 +1,19 @@
+{
+  "name": "starboard-web",
+  "version": "1.0.0",
+  "description": "Web interface for Starboard",
+  "main": "bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamhb123/Starboard-Web.git"
+  },
+  "author": "Adam Brewer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamhb123/Starboard-Web/issues"
+  },
+  "homepage": "https://github.com/adamhb123/Starboard-Web#readme"
+}
