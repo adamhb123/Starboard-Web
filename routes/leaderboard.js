@@ -1,5 +1,5 @@
 const express = require("express");
-const starboardInterface = require("../starboardInterface.js");
+const starboardInterface = require("../starboard-interface.js");
 const router = express.Router();
 
 /* GET home page. */
